@@ -1,0 +1,152 @@
+/*
+ * @Author: qiaozp
+ * @LastEditors: qiaozp
+ * @Description: 按钮公共的样式修改  以$开头的是自定义参数
+ * @Date: 2019-03-20 11:07:17
+ * @LastEditTime: 2019-04-25 16:43:41
+ * @include:scss语法  调用mixin的colorBtn方法
+ */
+
+$blue:#3082f3;
+$light-blue:#2069cf;
+$green: #21c034;
+$light-green: #15a626;
+$yellow:#f4b02d;
+$light-yellow: #d49316;
+$red:#ce090c;
+$light-red: #b7090b;
+$panGreen: #0ca41e;
+$light-panGreen: #0a8218;
+$bloodRed: #e7a623;
+$light-bloodRed: #cc8f15;
+//sidebar
+$menuBg:#304156; //菜单背景颜色
+@mixin colorBtn($color, $lightColor) {
+    background: $color !important;
+    border-color: $color !important;
+    &:hover {
+        color: #fff;
+        border-color: $lightColor !important;
+        background: $lightColor !important;
+        &:before,
+        &:after {
+            background: $lightColor;
+        }
+    }
+}
+
+.blue-btn {
+    @include colorBtn($blue, $light-blue)
+}
+
+.green-btn {
+    @include colorBtn($green, $light-green)
+}
+
+.yellow-btn {
+    @include colorBtn($yellow, $light-yellow)
+}
+
+.panGreen-btn {
+    @include colorBtn($panGreen, $light-panGreen)
+}
+
+.red-btn {
+    @include colorBtn($red, $light-red)
+}
+
+.bloodRed-btn {
+    @include colorBtn($bloodRed, $light-bloodRed)
+}
+
+.own-btn {
+    border-radius: 5px;
+    i {
+        margin-right: 5px
+    }
+    &.blue-btn {
+        button {
+            @include colorBtn($blue, $light-blue)
+        }
+    }
+    &.green-btn {
+        button {
+            @include colorBtn($green, $light-green)
+        }
+    }
+    &.yellow-btn {
+        button {
+            @include colorBtn($yellow, $light-yellow)
+        }
+    }
+    &.panGreen-btn {
+        button {
+            @include colorBtn($panGreen, $light-panGreen)
+        }
+    }
+    &.red-btn {
+        button {
+            @include colorBtn($red, $light-red)
+        }
+    }
+    &.bloodRed-btn {
+        button {
+            @include colorBtn($bloodRed, $light-bloodRed)
+        }
+    }
+}
+
+.el-dropdown-menu {
+    padding: 5px 0;
+}
+
+.el-dropdown-menu__item {
+    width: 117px;
+    text-align: center;
+    line-height: 30px
+}
+
+.custom-button {
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    color: #fff;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: 0;
+    margin: 0;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.btn {
+    width: 22px !important;
+    height: 24px !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.el-button+.el-button {
+    margin-left: 5px;
+}
+
+.el-dialog__headerbtn .el-dialog__close {
+    color: #fff !important;
+}
+
+.el-dialog__headerbtn:hover .el-dialog__close {
+    color: #e8281f !important;
+}
+
+@keyframes wait-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

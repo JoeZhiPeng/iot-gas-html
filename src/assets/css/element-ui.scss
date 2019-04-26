@@ -1,0 +1,86 @@
+/*
+ * @Author: qiaozp
+ * @LastEditors: qiaozp
+ * @Description: 覆盖一些element-ui样式
+ * @Date: 2019-03-06 14:03:36
+ * @LastEditTime: 2019-04-22 13:43:48
+ */
+
+.block-checkbox {
+    display: block;
+}
+
+.operation-container {
+    .cell {
+        padding: 10px !important;
+    }
+    .el-button {
+        &:nth-child(3) {
+            margin-top: 10px;
+            margin-left: 0px;
+        }
+        &:nth-child(4) {
+            margin-top: 10px;
+        }
+    }
+}
+
+.el-upload {
+    input[type="file"] {
+        display: none !important;
+    }
+}
+
+.el-upload__input {
+    display: none;
+}
+
+.cell {
+    .el-tag {
+        margin-right: 8px;
+    }
+}
+
+.small-padding {
+    .cell {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+.status-col {
+    .cell {
+        padding: 0 10px;
+        text-align: center;
+        .el-tag {
+            margin-right: 0px;
+        }
+    }
+}
+
+//暂时性解决diolag 
+.el-dialog {
+    transform: none;
+    left: 0;
+    position: relative;
+    margin: 0 auto;
+}
+
+.el-scrollbar__view.el-select-dropdown__list {
+    padding: 10px;
+    .select-tree-input {
+        width: 100%
+    }
+}
+
+.el-input__inner:invalid {
+    box-shadow: none;
+}
+
+.el-cascader {
+    line-height: 30px !important;
+}
+
+.el-select-dropdown__item.selected {
+    color: #f4b02d
+}
